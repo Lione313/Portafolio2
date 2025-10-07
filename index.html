@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilan Lionel Gutierrez Aimituma - Portafolio Profesional</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="#inicio"><i class="fas fa-house"></i><span>INICIO</span></a>
+    <a href="#perfil"><i class="fas fa-user-tie"></i><span>PERFIL</span></a>
+    <a href="#proyectos"><i class="fas fa-code"></i><span>PROYECTOS</span></a>
+    <a href="#noticias"><i class="fas fa-newspaper"></i><span>NOTICIAS</span></a>
+    <a href="#contactos"><i class="fas fa-envelope"></i><span>CONTACTOS</span></a>
+  </nav>
+</header>
+
+<section id="inicio">
+  <div class="hero">
+    <img src="https://i.pinimg.com/736x/5b/76/9c/5b769c7adaef6de521f1e10f2942f04a.jpg" alt="Foto de Dilan Gutierrez Aimituma">
+    <div class="hero-content">
+      <h1 id="animated-name"></h1>
+      <p><strong>Desarrollador Full Stack en formación</strong></p>
+      <p>Estudiante de Diseño y Desarrollo de Software – TECSUP (2023 – Actualidad)</p>
+      <p>Apasionado por la creación de soluciones tecnológicas modernas, con experiencia en Laravel, React, y Flutter.</p>
+      <div class="button-group">
+        <a class="button" href="https://www.linkedin.com/in/dilan-lionel-gutierrez-aimituma-ba63232a1" target="_blank">LinkedIn</a>
+        <a class="button" href="mailto:dilanaimituma@gmail.com">Contáctame</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #animated-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b91c1c; /* rojo */
+    display: inline-block;
+  }
+
+  #animated-name::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const name = "Dilan Lionel Gutierrez Aimituma";
+    const nameElement = document.getElementById("animated-name");
+
+    let index = 0;
+    let isDeleting = false;
+
+    function type() {
+      if (!isDeleting) {
+        nameElement.textContent = name.slice(0, index + 1);
+        index++;
+        if (index === name.length) {
+          isDeleting = true;
+          setTimeout(type, 1500);
+          return;
+        }
+      } else {
+        nameElement.textContent = name.slice(0, index - 1);
+        index--;
+        if (index === 0) {
+          isDeleting = false;
+        }
+      }
+      setTimeout(type, isDeleting ? 50 : 150);
+    }
+
+    type();
+  });
+</script>
+
+
+<section id="perfil">
+  <h2>Perfil Profesional</h2>
+  <div class="card">
+    <p>Soy un desarrollador Full Stack en formación con experiencia en proyectos web y móviles. Me especializo en crear interfaces modernas, responsivas y eficientes, así como backends sólidos y escalables.</p>
+  </div>
+  
+  <div class="competencias-grid">
+    <div class="card competencia-card">
+      <h3>Competencias Técnicas</h3>
+      <ul>
+        <li>Laravel, Flask, React, Next.js, Flutter</li>
+        <li>Docker, Kubernetes, Git y GitHub</li>
+        <li>Patrones de diseño y principios SOLID</li>
+        <li>Bases de datos MySQL, Oracle, MongoDB</li>
+      </ul>
+    </div>
+    
+    <div class="card competencia-card">
+      <h3>Objetivo Profesional</h3>
+      <p>Convertirme en un profesional capaz de liderar proyectos de desarrollo tecnológico innovadores, integrando soluciones sostenibles y de alto impacto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos y Experiencia</h2>
+  <div class="card">
+    <h3>STRATEDU S.A.C. – Practicante Full Stack Developer</h3>
+    <p>Participé en el desarrollo de la plataforma <strong>Certificatek</strong> para empresas mineras. Usé Laravel 11, Angular 17 y Docker.</p>
+    <ul>
+      <li>Diseño e implementación de módulos backend siguiendo principios SOLID.</li>
+      <li>Desarrollo de interfaces responsivas con Angular.</li>
+      <li>Implementación de entornos con Docker y Kubernetes.</li>
+      <li>Trabajo bajo metodología Scrum.</li>
+    </ul>
+    <div class="logro">
+      <strong>Logros:</strong> Entrega exitosa del MVP en 2 meses, adaptando funcionalidades según requerimientos reales del cliente.
+    </div>
+  </div>
+</section>
+
+<section id="noticias">
+  <h2>Noticias y Artículos</h2>
+  <div class="noticias-grid">
+    <div class="card">
+      <h3>El futuro del desarrollo Full Stack</h3>
+      <span class="badge">Artículo</span>
+      <p>El perfil de desarrollador full stack sigue siendo uno de los más demandados por su versatilidad y capacidad para entender tanto el frontend como el backend de un proyecto.</p>
+    </div>
+    <div class="card">
+      <h3>Modern Web Development Trends 2025</h3>
+      <span class="badge">English Article</span>
+      <p>New technologies like WebAssembly, AI-driven interfaces, and serverless computing are reshaping the web development landscape.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contactos">
+  <h2>Contactos</h2>
+  <div class="card contacto-card">
+    <div class="contacto-grid">
+      <div class="contacto-item">
+        <span class="icon">✉️</span>
+        <div>
+          <strong>Correo</strong>
+          <p>dilanaimituma@gmail.com</p>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <span class="icon">📱</span>
+        <div>
+          <strong>Teléfono</strong>
+          <p>960 697 322</p>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <span class="icon">💼</span>
+        <div>
+          <strong>LinkedIn</strong>
+          <p><a href="https://www.linkedin.com/in/dilan-lionel-gutierrez-aimituma-ba63232a1" target="_blank">Ver perfil</a></p>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <span class="icon">📍</span>
+        <div>
+          <strong>Dirección</strong>
+          <p>Calle Martin Luther King, Asent. Hum. César Vallejo, Mz. B Lt. 01 – El Agustino, Lima, Perú</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 | Dilan Lionel Gutierrez Aimituma</p>
+  <p>Tecsup – Diseño y Desarrollo de Software</p>
+</footer>
+
+</body>
+</html>
